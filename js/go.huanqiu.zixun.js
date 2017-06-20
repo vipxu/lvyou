@@ -1,0 +1,25 @@
+$(function(){
+	/******************************注册背景颜色改变******************************/
+	$("#headerOneReg").hover(function(){
+		$(this).css("background-color","#676767");
+	},function(){
+		$(this).css("background-color","#434343");
+	});
+	/******************************注册背景颜色改变******************************/
+	/******************************环球下拉列表******************************/
+	$("#headerOneHuanqiu").hover(function(){
+		$(this).find("img").attr("src","img/LogoTexiao2.png");
+		$("#headerOneTeXiao").show();
+	},function(){
+		$(this).find("img").attr("src","img/LogoTexiao1.png");
+		$("#headerOneTeXiao").hide();
+	})
+	$("#headerOneTeXiao").hover(function(){
+		$("#headerOneHuanqiu").find("img").attr("src","img/LogoTexiao2.png");
+		$("#headerOneTeXiao").show();
+	},function(){
+		$("#headerOneHuanqiu").find("img").attr("src","img/LogoTexiao1.png");
+		$("#headerOneTeXiao").hide();
+	})
+	/******************************环球下拉列表******************************/
+});
